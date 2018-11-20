@@ -9,24 +9,17 @@
 
 
 function sortArray(array) {
-  //páratlan
+  let indices = [];
+  array
+  .filter((v, i) => v % 2 && indices.push(i))
+  .sort((a, b) => a - b)
+  .forEach((v, i) => array[indices[i]] = v);
   return array
-    .map((el, i) => {
-      return {
-        index: i,
-        value: el
-      }
-    })
-    .sort((a.value, b.value) => {
-      if (a.value > b.value) {
-        return a 
-      }
-    }) 
 };
 
 
 
 
 console.log(sortArray([5, 3, 2, 8, 1, 4]), "result: [1, 3, 2, 8, 5, 4]");
-//console.log(sortArray([5, 3, 1, 8, 0]), "result [1, 3, 5, 8, 0]");
+console.log(sortArray([5, 3, 1, 8, 0]), "result [1, 3, 5, 8, 0]");
 //console.log(sortArray([]), "result: []");
