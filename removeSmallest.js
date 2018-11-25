@@ -8,18 +8,12 @@
 
 //Don't change the order of the elements that are left.
 
-function removeSmallest(numbers) {
-  numbers.reduce((accumulator, current) => {
-    let smallestIndex = 0
-    if (smallestIndex === 0 || accumulator[length - 1] !== current) {
-      accumulator.push(current);
-
-    }
-    return accumulator;
-  }, []);
-  //throw "TODO: removeSmallest";
+function removeSmallest(array) {
+  const index = array.indexOf(Math.min(...array));
+  array.splice(index, 1);
+  return array
 }
 
-
+console.log(removeSmallest([5, 3, 2, 1, 1, 4]), "expected: [5, 3, 2, 1, 4]");
 console.log(removeSmallest([1, 2, 3, 4, 5]), "expected: [2, 3, 4, 5]");
 console.log(removeSmallest([5, 3, 2, 1, 4]), "expected: [5, 3, 2, 4]");

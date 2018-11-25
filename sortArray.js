@@ -20,6 +20,6 @@ function sortArray(array) {
 
 
 
-console.log(sortArray([5, 3, 2, 8, 1, 4]), "result: [1, 3, 2, 8, 5, 4]");
-console.log(sortArray([5, 3, 1, 8, 0]), "result [1, 3, 5, 8, 0]");
-//console.log(sortArray([]), "result: []");
+console.log(sortArray([5, 3, 2, 8, 1, 4]), "expected output: [1, 3, 2, 8, 5, 4]");
+console.log(sortArray([5, 3, 1, 8, 0]), "expected output [1, 3, 5, 8, 0]");
+console.log(sortArray([]), "expected output: []");
