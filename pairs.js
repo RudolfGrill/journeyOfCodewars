@@ -22,8 +22,6 @@ function sockMerchant(n, ar) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === array[i + 1]) {
       ans++;
-      console.log(`i=${i}`, array[i], array[i + 1], array[i] === array[i + 1], "egyenlo")
-
       i++;
     } 
   }
